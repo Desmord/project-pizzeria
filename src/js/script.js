@@ -55,11 +55,13 @@
   class Product {
     constructor(id, data) {
       const thisProduct = this;
+
       thisProduct.id = id;
       thisProduct.data = data;
-      thisProduct.renderInMenu();
 
-      console.log(`new Product:`, thisProduct);
+      thisProduct.renderInMenu();
+      thisProduct.initAccordion();
+
     }
 
     renderInMenu() {
@@ -73,13 +75,36 @@
       menuContainer.appendChild(thisProduct.element);
     }
 
+    initAccordion() {
+      const thisProduct = this;
+      const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
+
+      clickableTrigger.addEventListener(`click`, function (event) {
+        event.preventDefault();
+
+        const activeProducts = document.querySelectorAll(`.product.active`);
+
+        if (activeProducts.length > 0) {
+          for (let i = 0; i < activeProducts.length; i++) {
+
+            if (activeProducts[i] != thisProduct.element) {
+              activeProducts[i].classList.remove(`active`);
+            }
+
+          }
+        }
+
+        thisProduct.element.classList.toggle(`active`);
+
+      });
+
+    }
+
   }
 
   const app = {
     initMenu: function () {
       const thisApp = this;
-
-      console.log(`thisApp.data:`, thisApp.data);
 
       for (let productData in thisApp.data.products) {
         new Product(productData, thisApp.data.products[productData]);
