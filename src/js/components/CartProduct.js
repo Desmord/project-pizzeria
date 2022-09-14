@@ -34,7 +34,7 @@ class CartProduct {
 
     thisCartProduct.amountWidget = new AmountWidget(thisCartProduct.dom.amountWidget);
 
-    thisCartProduct.amountWidget.linkDecrease.addEventListener(`click`, () => {
+    thisCartProduct.amountWidget.dom.linkDecrease.addEventListener(`click`, () => {
       thisCartProduct.amount -= 1;
       if (thisCartProduct.amount < 0) {
         thisCartProduct.amount = 0;
@@ -42,12 +42,12 @@ class CartProduct {
       thisCartProduct.price = thisCartProduct.amount * thisCartProduct.priceSingle;
       thisCartProduct.dom.price.innerHTML = thisCartProduct.price;
     });
-    thisCartProduct.amountWidget.linkIncrease.addEventListener(`click`, () => {
+    thisCartProduct.amountWidget.dom.linkIncrease.addEventListener(`click`, () => {
       thisCartProduct.amount += 1;
       thisCartProduct.price = thisCartProduct.amount * thisCartProduct.priceSingle;
       thisCartProduct.dom.price.innerHTML = thisCartProduct.price;
     });
-    thisCartProduct.amountWidget.input.addEventListener(`change`, (e) => {
+    thisCartProduct.amountWidget.dom.input.addEventListener(`change`, (e) => {
       thisCartProduct.amount = parseInt(e.target.value);
       thisCartProduct.price = thisCartProduct.amount * thisCartProduct.priceSingle;
       thisCartProduct.dom.price.innerHTML = thisCartProduct.price;
