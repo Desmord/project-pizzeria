@@ -44,6 +44,8 @@ export const select = {
   home: {
     goOrder: `#go_order`,
     goBooking: `#go_booking`,
+    carousel: `.carousel`,
+    carouselCell: `.carousel-cell`,
   },
   booking: {
     peopleAmount: '.people-amount',

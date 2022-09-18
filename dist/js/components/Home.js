@@ -1,4 +1,5 @@
 import { select, templates, classNames } from '../settings.js';
+// import Flickity from '../../vendor/flickity.pkgd.min.js';
 
 class Home {
   constructor(wrapper) {
@@ -6,6 +7,7 @@ class Home {
 
     thisHome.renderInHome(wrapper);
     thisHome.addActionToButtons();
+    thisHome.initCarousel();
   }
 
   renderInHome(wrapper) {
@@ -21,6 +23,9 @@ class Home {
 
     thisHome.pages = document.querySelector(select.containerOf.pages).children;
     thisHome.navLinks = document.querySelectorAll(select.nav.links);
+
+    thisHome.dom.carousel = wrapper.querySelector(select.home.carousel);
+    thisHome.dom.carouselCells = wrapper.querySelectorAll(select.home.carouselCell);
 
   }
 
@@ -57,6 +62,19 @@ class Home {
 
       window.location.hash = `#/booking`;
     });
+  }
+
+  initCarousel() {
+    const thisHome = this;
+    // eslint-disable-next-line
+    const flkty = new Flickity(thisHome.dom.carousel, {
+      cellAlign: `left`,
+      contain: true,
+      draggable: `>1`,
+      wrapAround: true,
+      autoPlay: true,
+    });
+
   }
 }
 

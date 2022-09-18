@@ -8,6 +8,8 @@
   <title>Pizzeria</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="vendor/range-slider.min.css">
+  <!-- <link rel="stylesheet" href="/src/vendor/flickity.min.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext"
     rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
@@ -83,6 +85,7 @@
 
   <script id="template-home" type="text/x-handlebars-template">
     <div class="home_wrapper">
+
       <section class="starting-section">
         <div id="go_order" class="cell cell-small">
           <img class="img" src="images/pizzaImages/pizza-1.jpg" alt="">
@@ -97,6 +100,41 @@
         <div class="cell cell-big">
           <p>OPENING HOURS: </p>
           <span>TUE-SUN, 12PM-12AM</span></div>
+      </section>
+
+      <section class="carousel">
+
+        <div class="carousel-cell">
+          <div class="carousel-img">
+            <img src="images/pizzaImages/pizza-3.jpg" alt="">
+          </div>
+          <div class="carousel-text">
+            <h2>Best Service</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, explicabo!</p>
+            <p><i>Lorem, ipsum.</i></p>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="carousel-img">
+            <img src="images/pizzaImages/pizza-3.jpg" alt="">
+          </div>
+          <div class="carousel-text">
+            <h2>Good Food</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis iusto culpa veniam aut blanditiis eum.</p>
+            <p><i>Lorem, ipsum.</i></p>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="carousel-img">
+            <img src="images/pizzaImages/pizza-3.jpg" alt="">
+          </div>
+          <div class="carousel-text">
+            <h2>Great Place</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, </p>
+            <p><i>Lorem, ipsum.</i></p>
+          </div>
+        </div>
+
       </section>
     </div>
   </script>
@@ -287,6 +325,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- <script src="vendor/flickity.pkgd.min.js"></script> -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="vendor/range-slider.min.js"></script>
   <script src="js/app.js" type="module"></script>
 </body>
