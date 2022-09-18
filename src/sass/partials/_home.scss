@@ -193,9 +193,19 @@
         height: 100%;
         position: absolute;
         z-index: 2;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.4);
         opacity: 0;
         transition: $transition ease-in;
       }
+    }
+
+  }
+
+  .instagram {
+
+    & a,
+    a:visited,
+    a:active {
+      color: $color-main;
     }
   }
