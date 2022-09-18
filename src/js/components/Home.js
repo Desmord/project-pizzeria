@@ -1,4 +1,4 @@
-import { select, templates, classNames } from '../settings.js';
+import { select, templates, classNames, settings } from '../settings.js';
 // import Flickity from '../../vendor/flickity.pkgd.min.js';
 
 class Home {
@@ -12,7 +12,7 @@ class Home {
 
   renderInHome(wrapper) {
     const thisHome = this;
-    const generatedHTML = templates.homePage();
+    const generatedHTML = templates.homePage({ images: settings.imagesAdress.workExamplesImagesAdresses });
 
     thisHome.dom = {};
     thisHome.dom.wrapper = wrapper;

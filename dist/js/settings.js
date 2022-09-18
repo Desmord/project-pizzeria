@@ -132,6 +132,16 @@ export const settings = {
     notRepeatParam: 'repeat=false',
     repeatParam: 'repeat_ne=false',
   },
+  imagesAdress: {
+    workExamplesImagesAdresses: [
+      `images/pizzaImages/pizza-4.jpg`,
+      `images/pizzaImages/pizza-5.jpg`,
+      `images/pizzaImages/pizza-6.jpg`,
+      `images/pizzaImages/pizza-7.jpg`,
+      `images/pizzaImages/pizza-8.jpg`,
+      `images/pizzaImages/pizza-9.jpg`,
+    ]
+  }
 
 };
 

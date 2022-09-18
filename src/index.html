@@ -8,7 +8,8 @@
   <title>Pizzeria</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="vendor/range-slider.min.css">
-  <!-- <link rel="stylesheet" href="/src/vendor/flickity.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext"
     rel="stylesheet">
@@ -134,6 +135,18 @@
             <p><i>Lorem, ipsum.</i></p>
           </div>
         </div>
+
+      </section>
+
+      <section class="our-work-examples">
+        {{#each images}}
+        <div class="img-container">
+          <img src="{{ this }}" alt="">
+          <a class="icon" href="#"><i class="fa-solid fa-heart"></i></a>
+          <a class="icon" href="#"><i class="fa-solid fa-share-nodes"></i></a>
+          <div class="overlay"></div>
+        </div>
+        {{/each}}
 
       </section>
     </div>
