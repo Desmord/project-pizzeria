@@ -41,6 +41,10 @@ export const select = {
       output: '.output',
     },
   },
+  home: {
+    goOrder: `#go_order`,
+    goBooking: `#go_booking`,
+  },
   booking: {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
